@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somsa Wala - Order Now</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header class="header">
+        <img src="{{ url_for('static', filename='burger.jpg') }}" alt="Burger" class="single-image">
+        <div class="header-text">Somsa Wala Mokama</div>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>Place Your Order</h2>
+            <form action="/submit_order" method="POST">
+                <div class="order-items">
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='somsaa.jpg') }}" alt="Delicious Somsa" class="somsa-image">
+                        </div>
+                        <label for="somsa">Somsa Quantity (9 rupees each):</label>
+                        <input type="number" id="somsa" name="somsa" min="0" value="0">
+                    </div>
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='rasgulla.jpg') }}" alt="Delicious Rasgulla" class="rasgulla-image">
+                        </div>
+                        <label for="rasgulla">Rasgulla Quantity (10 rupees each):</label>
+                        <input type="number" id="rasgulla" name="rasgulla" min="0" value="0">
+                    </div>
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='chicken.jpg') }}" alt="Fresh Chicken" class="chicken-image">
+                        </div>
+                        <label for="chicken">Chicken Weight (200 rupees per kg):</label>
+                        <input type="number" id="chicken" name="chicken" step="0.1" min="0" value="0">
+                    </div>
+                </div>
+                <div class="order-items">
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='sandwich.jpg') }}" alt="Delicious Sandwich" class="sandwich-image">
+                        </div>
+                        <label for="sandwich">Sandwich Quantity (20 rupees each):</label>
+                        <input type="number" id="sandwich" name="sandwich" min="0" value="0">
+                    </div>
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='nescafe.jpg') }}" alt="Hot Nescafe" class="nescafe-image">
+                        </div>
+                        <label for="nescafe">Nescafe Quantity (15 rupees each):</label>
+                        <input type="number" id="nescafe" name="nescafe" min="0" value="0">
+                    </div>
+                    <div class="order-item">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='burger.jpg') }}" alt="Delicious Burger" class="burger-image">
+                        </div>
+                        <label for="burger">Burger Quantity (20 rupees each):</label>
+                        <input type="number" id="burger" name="burger" min="0" value="0">
+                    </div>
+                </div>
+                <div class="total-price">
+                    <p>Total Price: <span id="totalPrice">0</span> rupees</p>
+                </div>
+                <input type="submit" value="Place Order">
+            </form>
+            <div class="links">
+                <a href="/orders">View Order History</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+/* Styles for the header with a single image and stylish text */
+.header {
+    position: relative;
+    height: 300px; /* Adjust height to accommodate the image and text */
+    overflow: hidden;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #ddd;
+    text-align: center;
+}
+
+.header img {
+    width: 100%; /* Make the image take up the full width */
+    height: 100%; /* Make the image take up the full height */
+    object-fit: cover; /* Cover the header area without distortion */
+}
+
+.header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the text */
+    color: white; /* Text color */
+    font-size: 3rem; /* Font size */
+    font-family: 'Brush Script MT', cursive; /* Stylish font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Shadow to make text stand out */
+    z-index: 1; /* Ensure text is on top of the image */
+}
+
+/* Common styles for all images */
+.somsa-image, .rasgulla-image, .chicken-image, .sandwich-image, .nescafe-image, .burger-image {
+    width: 150px; /* Fixed width */
+    height: 150px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+    display: block;
+    margin: 20px auto; /* Increase margin to add more white space */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Existing styles remain unchanged */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ccd8c9;
+}
+
+.container {
+    width: 100%; /* Make the container take up the full width */
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
+    max-width: 100%; /* Ensure it covers the full width */
+    overflow: hidden;
+    margin-top: -2px; /* Pull the container up to touch the header image */
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 20px; /* Increase padding for more white space */
+    min-height: 140px; /* Increase height for more white space */
+    border-bottom: #fff 3px solid;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px; /* Add padding to increase space below the header text */
+}
+
+.form-container {
+    background: #fff;
+    padding: 20px; /* Increase padding for more white space inside the form */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin-top: 0; /* Remove the margin above the form container */
+}
+
+label {
+    display: block;
+    margin: 15px 0 10px; /* Increase margin for more space between labels and inputs */
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px; /* Increase padding for more space inside the input */
+    margin-bottom: 20px; /* Increase margin for more space below inputs */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in element's total width */
+}
+
+input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 15px 20px; /* Increase padding for a bigger button */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Full width for a better touch experience */
+    box-sizing: border-box; /* Include padding in element's total width */
+    margin-top: 20px; /* Add margin for space above the button */
+}
+
+input[type="submit"]:hover {
+    background: #ca3c3c;
+}
+
+.links {
+    margin-top: 30px; /* Increase margin to add more space above the links */
+    text-align: center; /* Center the links */
+}
+
+.links a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px; /* Increase margin between links */
+}
+
+.links a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Flexbox container for order items */
+.order-items {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto multiple lines if needed */
+    gap: 30px; /* Increase gap to add more space between items */
+    justify-content: center; /* Centers items horizontally */
+    align-items: flex-start; /* Aligns items vertically at the top for a more consistent look */
+}
+
+/* General styles for order item containers */
+.order-item {
+    text-align: center; /* Center text within each order item */
+    flex: 0 1 250px; /* Fixed flex basis for each item with some flexibility */
+    max-width: 250px; /* Limit the max width for each item */
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 20px; /* Increase padding inside the order items */
+    margin: 20px; /* Increase margin around order items for more white space */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Table styles for order history */
+.order-history table {
+    width: 100%; /* Full width for the table */
+    border-collapse: collapse; /* Collapse borders */
+    margin: 20px 0; /* Margin around the table */
+}
+
+.order-history th, .order-history td {
+    border: 1px solid #ddd; /* Border for table cells */
+    padding: 10px; /* Padding inside table cells */
+    text-align: center; /* Center text in table cells */
+}
+
+.order-history th {
+    background-color: #f4f4f4; /* Background color for table headers */
+}
+
+.order-history tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row colors for better readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .order-items {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center; /* Center align items */
+    }
+    
+    input[type="submit"] {
+        width: auto; /* Adjust button width on smaller screens */
+    }
+}
